@@ -8,6 +8,7 @@ License:	GPL v2+
 Group:		Themes
 Source0:	%{name}-%{_snap}.tar.gz
 # Source0-md5:	ff567dcd75dede824fe66ab1955d2f21
+Patch0:		kde-ac260-lt.patch
 URL:		http://www.beryl-project.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -26,6 +27,7 @@ Jest przeznaczony do u¿ywania wraz z KDE.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
 
 %build
 %{__make} -f admin/Makefile.common svn
