@@ -23,8 +23,8 @@ Aquamarine is themeable window decorator and compositing manager for
 Beryl. Aquamarine is intended for use with KDE.
 
 %description -l pl
-Aquamarine jest dekoratorem okien dla beryla u¿ywaj±cym tematów.
-Jest przeznaczony do u¿ywania wraz z KDE.
+Aquamarine jest dekoratorem okien dla beryla u¿ywaj±cym tematów. Jest
+przeznaczony do u¿ywania wraz z KDE.
 
 %prep
 %setup -q -n %{name}
