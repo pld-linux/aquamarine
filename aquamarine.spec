@@ -2,13 +2,12 @@
 Summary:	Themeable window decorator and compositing manager for Beryl
 Summary(pl):	Dekorator dla Beryla u¿ywaj±cy tematów
 Name:		aquamarine
-Version:	0.1.2_%{_snap}
+Version:	0.1.3_%{_snap}
 Release:	1
 License:	GPL
 Group:		Themes
 Source0:	%{name}-%{_snap}.tar.gz
 # Source0-md5:	ff567dcd75dede824fe66ab1955d2f21
-Source1:	admin.tar.gz
 BuildRequires:	kdebase-devel >= 9:3.5.0
 BuildRequires:	kdelibs-devel >= 9:3.5.0
 BuildRequires:	rpmbuild(macros) >= 1.129
