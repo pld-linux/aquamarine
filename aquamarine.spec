@@ -9,6 +9,8 @@ Group:		Themes
 Source0:	%{name}-%{_snap}.tar.gz
 # Source0-md5:	ff567dcd75dede824fe66ab1955d2f21
 URL:		http://www.beryl-project.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	kdebase-devel >= 9:3.5.0
 BuildRequires:	kdelibs-devel >= 9:3.5.0
 BuildRequires:	rpmbuild(macros) >= 1.129
@@ -24,9 +26,9 @@ Jest przeznaczony do u¿ywania wraz z KDE.
 
 %prep
 %setup -q -n %{name}
-%{__make} -f admin/Makefile.common svn
 
 %build
+%{__make} -f admin/Makefile.common svn
 %configure \
 %if "%{_lib}" == "lib64"
 	--enable-libsuffix=64 \
