@@ -15,6 +15,7 @@ BuildRequires:	automake
 BuildRequires:	kdebase-devel >= 9:3.5.0
 BuildRequires:	kdelibs-devel >= 9:3.5.0
 BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	xorg-lib-libXcomposite-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
