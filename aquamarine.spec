@@ -27,7 +27,12 @@ Jest przeznaczony do u¿ywania wraz z kde.
 %{__make} -f admin/Makefile.common svn
 
 %build
-%configure
+%configure \
+%if "%{_lib}" == "lib64"
+	--enable-libsuffix=64 \
+%endif
+	--%{?debug:en}%{!?debug:dis}able-debug%{?debug:=full} \
+	--with-qt-libraries=%{_libdir}
 %{__make}
 
 %install
