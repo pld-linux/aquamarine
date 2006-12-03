@@ -4,10 +4,11 @@ Summary(pl):	Dekorator dla Beryla u¿ywaj±cy tematów
 Name:		aquamarine
 Version:	0.1.3_%{_snap}
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		Themes
 Source0:	%{name}-%{_snap}.tar.gz
 # Source0-md5:	ff567dcd75dede824fe66ab1955d2f21
+URL:		http://www.beryl-project.org/
 BuildRequires:	kdebase-devel >= 9:3.5.0
 BuildRequires:	kdelibs-devel >= 9:3.5.0
 BuildRequires:	rpmbuild(macros) >= 1.129
@@ -18,8 +19,8 @@ Aquamarine is themeable window decorator and compositing manager for
 Beryl. Aquamarine is intended for use with KDE.
 
 %description -l pl
-Aquamarine jest dekoratorem okien dla beryla u¿ywaj±cym tematów. Jest
-przeznaczony do u¿ywania wraz z kde.
+Aquamarine jest dekoratorem okien dla beryla u¿ywaj±cym tematów.
+Jest przeznaczony do u¿ywania wraz z kde.
 
 %prep
 %setup -q -n %{name}
