@@ -1,6 +1,6 @@
 %define         _snap   20061203
 Summary:	Themeable window decorator and compositing manager for Beryl
-Summary(pl):	Dekorator dla Beryla u¿ywaj±cy tematów
+Summary(pl):	Dekorator okien dla Beryla u¿ywaj±cy motywów
 Name:		aquamarine
 Version:	0.1.3
 Release:	0.%{_snap}.1
@@ -23,7 +23,7 @@ Aquamarine is themeable window decorator and compositing manager for
 Beryl. Aquamarine is intended for use with KDE.
 
 %description -l pl
-Aquamarine jest dekoratorem okien dla beryla u¿ywaj±cym tematów. Jest
+Aquamarine jest dekoratorem okien dla Beryla u¿ywaj±cym motywów. Jest
 przeznaczony do u¿ywania wraz z KDE.
 
 %prep
