@@ -15,6 +15,7 @@ BuildRequires:	beryl-core-devel >= 1:0.1.3
 BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	kdebase-devel >= 9:3.5.0
 BuildRequires:	kdelibs-devel >= 9:3.5.0
+BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	xorg-lib-libXcomposite-devel
 Requires:	beryl-core >= 1:0.1.3
