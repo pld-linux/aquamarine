@@ -18,6 +18,7 @@ BuildRequires:	kdelibs-devel >= 9:3.5.0
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	xorg-lib-libXcomposite-devel
 Requires:	beryl-core >= 1:0.1.3
+Obsoletes:	compiz-quinnstorm-kde-decorator
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
