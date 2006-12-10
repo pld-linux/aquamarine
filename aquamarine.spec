@@ -9,6 +9,7 @@ Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	aeb1c42f907f08226c5d4ce48b8d209c
 Patch0:		%{name}-ac260-lt.patch
 Patch1:		%{name}-nodeps_am.patch
+Patch2:		%{name}-include.patch
 URL:		http://www.beryl-project.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.5
@@ -35,6 +36,7 @@ przeznaczony do u¿ywania wraz z KDE.
 %setup -q
 %patch0 -p1
 %patch1 -p0
+%patch2 -p0
 
 %build
 # can't libtoolize with KDE mess
