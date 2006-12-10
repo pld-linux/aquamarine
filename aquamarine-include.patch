@@ -1,0 +1,11 @@
+--- src/integration.h	2006-12-10 01:10:12.000000000 +0100
++++ src/integration.h-new	2006-12-10 22:54:14.000000000 +0100
+@@ -37,7 +37,7 @@
+ #ifdef HAVE_BERYL_SETTINGS
+ 
+ extern "C" {
+-#include <beryl-settings.h>
++#include <beryl/beryl-settings.h>
+ }
+ 
+ class KConfig;
