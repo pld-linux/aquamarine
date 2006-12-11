@@ -19,6 +19,7 @@ BuildRequires:	kdebase-devel >= 9:3.5.0
 BuildRequires:	kdelibs-devel >= 9:3.5.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	startup-notification-devel
 BuildRequires:	xorg-lib-libXcomposite-devel
 Requires:	beryl-core >= 1:0.1.3
 Obsoletes:	compiz-quinnstorm-kde-decorator
