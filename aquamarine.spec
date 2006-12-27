@@ -1,12 +1,12 @@
 Summary:	Themeable window decorator and compositing manager for beryl
 Summary(pl):	Dekorator okien dla beryla u¿ywaj±cy motywów
 Name:		aquamarine
-Version:	0.1.3
-Release:	2
+Version:	0.1.4
+Release:	0.1
 License:	GPL v2+
 Group:		Themes
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	aeb1c42f907f08226c5d4ce48b8d209c
+# Source0-md5:	6b0009bb7af2d37654d8001b1aecfdbe
 Patch0:		%{name}-ac260-lt.patch
 Patch1:		%{name}-nodeps_am.patch
 Patch2:		%{name}-include.patch
@@ -36,15 +36,43 @@ przeznaczony do u¿ywania wraz z KDE.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p0
-%patch2 -p0
+#%patch1 -p0
+#%patch2 -p0
+
+mv -f po/{ca_ES,ca}.po
+mv -f po/{es_ES,es}.po
+mv -f po/{hu_HU,hu}.po
+mv -f po/{it_IT,it}.po
+mv -f po/{ko_KR,ko}.po
+mv -f po/{pt_PT,pt}.po
+mv -f po/{ru_RU,ru}.po
+mv -f po/{uk_UA,uk}.po
+rm -r po/ru_UA.po # I dont know whot's that
+
+# NOTE: check the list after any upgrade!
+cat > po/LINGUAS <<EOF
+ca
+es
+es_AR
+fr
+hu
+it
+ko
+pt_BR
+pt
+ru
+uk
+zh_CN
+zh_HK
+zh_TW
+EOF
 
 %build
 # can't libtoolize with KDE mess
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
+#%{__aclocal}
+#%{__autoconf}
+#%{__autoheader}
+#%{__automake}
 %configure \
 %if "%{_lib}" == "lib64"
 	--enable-libsuffix=64 \
@@ -59,10 +87,17 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS 
+%doc AUTHORS
 %attr(755,root,root) %{_bindir}/aquamarine
+%{_prefix}/lib/beryl/backends/libkconfig.la
+%attr(755,root,root) %{_prefix}/lib/beryl/backends/libkconfig.so
+%{_prefix}/lib/kde3/kcm_beryl.la
+%attr(755,root,root) %{_prefix}/lib/kde3/kcm_beryl.so
+%{_desktopdir}/kde/beryl.desktop
+%{_datadir}/config.kcfg/aquamarine.kcfg
