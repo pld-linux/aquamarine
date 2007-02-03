@@ -2,7 +2,7 @@ Summary:	Themeable window decorator and compositing manager for beryl
 Summary(pl):	Dekorator okien dla beryla u¿ywaj±cy motywów
 Name:		aquamarine
 Version:	0.1.9999.1
-Release:	0.1
+Release:	1
 License:	GPL v2+
 Group:		Themes
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
@@ -49,8 +49,10 @@ mv -f po/{es_ES,es}.po
 mv -f po/{hu_HU,hu}.po
 mv -f po/{it_IT,it}.po
 mv -f po/{ko_KR,ko}.po
+mv -f po/{pl_PL,pl}.po
 mv -f po/{pt_PT,pt}.po
 mv -f po/{ru_RU,ru}.po
+mv -f po/{sv_SE,sv}.po
 mv -f po/{uk_UA,uk}.po
 rm -r po/ru_UA.po # I dont know whot's that
 
@@ -63,9 +65,11 @@ fr
 hu
 it
 ko
+pl
 pt_BR
 pt
 ru
+sv
 uk
 zh_CN
 zh_HK
