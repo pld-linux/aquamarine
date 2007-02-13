@@ -1,5 +1,5 @@
 Summary:	Themeable window decorator and compositing manager for beryl
-Summary(pl.UTF-8):   Dekorator okien dla beryla używający motywów
+Summary(pl.UTF-8):	Dekorator okien dla beryla używający motywów
 Name:		aquamarine
 Version:	0.1.9999.1
 Release:	1
