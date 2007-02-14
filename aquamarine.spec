@@ -1,12 +1,12 @@
 Summary:	Themeable window decorator and compositing manager for beryl
 Summary(pl.UTF-8):	Dekorator okien dla beryla używający motywów
 Name:		aquamarine
-Version:	0.1.9999.1
+Version:	0.1.9999.2
 Release:	1
 License:	GPL v2+
 Group:		Themes
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	aeb3fb74c880c7caa3e789b7248174bd
+# Source0-md5:	b864e80205227fdc0d0401d845ed928b
 Patch0:		%{name}-ac260-lt.patch
 Patch1:		%{name}-include.patch
 Patch2:		kde-ac260-lt.patch
@@ -102,9 +102,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS
 %attr(755,root,root) %{_bindir}/aquamarine
-%{_prefix}/lib/beryl/backends/libkconfig.la
-%attr(755,root,root) %{_prefix}/lib/beryl/backends/libkconfig.so
-%{_prefix}/lib/kde3/kcm_beryl.la
-%attr(755,root,root) %{_prefix}/lib/kde3/kcm_beryl.so
+%{_libdir}/beryl/backends/libkconfig.la
+%attr(755,root,root) %{_libdir}/beryl/backends/libkconfig.so
+%{_libdir}/kde3/kcm_beryl.la
+%attr(755,root,root) %{_libdir}/kde3/kcm_beryl.so
 %{_desktopdir}/kde/beryl.desktop
 %{_datadir}/config.kcfg/aquamarine.kcfg
