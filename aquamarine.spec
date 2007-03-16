@@ -1,19 +1,19 @@
 Summary:	Themeable window decorator and compositing manager for beryl
 Summary(pl.UTF-8):	Dekorator okien dla beryla używający motywów
 Name:		aquamarine
-Version:	0.1.9999.2
+Version:	0.2.0
 Release:	1
 License:	GPL v2+
 Group:		Themes
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	b864e80205227fdc0d0401d845ed928b
+# Source0-md5:	9d5341b93c4f223838a37a7adc5e3c19
 Patch0:		%{name}-ac260-lt.patch
 Patch1:		%{name}-include.patch
 Patch2:		kde-ac260-lt.patch
 URL:		http://www.beryl-project.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.5
-BuildRequires:	beryl-core-devel >= 1:0.1.3
+BuildRequires:	beryl-core-devel >= 1:0.2.0
 BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	kdebase-devel >= 9:3.5.0
 BuildRequires:	kdelibs-devel >= 9:3.5.0
@@ -24,7 +24,7 @@ BuildRequires:	startup-notification-devel
 BuildRequires:	xorg-lib-libXcomposite-devel
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-lib-libXft-devel
-Requires:	beryl-core >= 1:0.1.3
+Requires:	beryl-core >= 1:0.2.0
 Obsoletes:	compiz-quinnstorm-kde-decorator
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,14 +42,9 @@ przeznaczony do używania wraz z KDE.
 %patch1 -p0
 %patch2 -p1
 
-mv -f po/{ca_ES,ca}.po
 mv -f po/{es_ES,es}.po
 mv -f po/{hu_HU,hu}.po
-mv -f po/{it_IT,it}.po
-mv -f po/{ko_KR,ko}.po
 mv -f po/{pl_PL,pl}.po
-mv -f po/{pt_PT,pt}.po
-mv -f po/{ru_RU,ru}.po
 mv -f po/{sv_SE,sv}.po
 mv -f po/{uk_UA,uk}.po
 rm -r po/ru_UA.po # I dont know whot's that
@@ -57,14 +52,15 @@ rm -r po/ru_UA.po # I dont know whot's that
 # NOTE: check the list after any upgrade!
 cat > po/LINGUAS <<EOF
 ca
+de
 es
 es_AR
-fr
 hu
 it
+ja
 ko
+nl
 pl
-pt_BR
 pt
 ru
 sv
