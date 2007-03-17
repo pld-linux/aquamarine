@@ -47,7 +47,9 @@ mv -f po/{hu_HU,hu}.po
 mv -f po/{pl_PL,pl}.po
 mv -f po/{sv_SE,sv}.po
 mv -f po/{uk_UA,uk}.po
-rm -r po/ru_UA.po # I dont know whot's that
+rm -f po/it_IT.po # it.po is newer then it_IT.po
+rm -f po/ru_RU.po # same as ru_UA.po
+rm -f po/ru_UA.po # I dont know what's that
 
 # NOTE: check the list after any upgrade!
 cat > po/LINGUAS <<EOF
