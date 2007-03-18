@@ -1,19 +1,19 @@
 Summary:	Themeable window decorator and compositing manager for beryl
 Summary(pl.UTF-8):	Dekorator okien dla beryla używający motywów
 Name:		aquamarine
-Version:	0.2.0
-Release:	2
+Version:	0.2.1
+Release:	1
 License:	GPL v2+
 Group:		Themes
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	9d5341b93c4f223838a37a7adc5e3c19
+# Source0-md5:	186826182dc2cefb3aaa09b7af938bec
 Patch0:		%{name}-ac260-lt.patch
 Patch1:		%{name}-include.patch
 Patch2:		kde-ac260-lt.patch
 URL:		http://www.beryl-project.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.5
-BuildRequires:	beryl-core-devel >= 1:0.2.0
+BuildRequires:	beryl-core-devel >= 1:%{version}
 BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	kdebase-devel >= 9:3.5.0
 BuildRequires:	kdelibs-devel >= 9:3.5.0
@@ -24,7 +24,7 @@ BuildRequires:	startup-notification-devel
 BuildRequires:	xorg-lib-libXcomposite-devel
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-lib-libXft-devel
-Requires:	beryl-core >= 1:0.2.0
+Requires:	beryl-core >= 1:%{version}
 Obsoletes:	compiz-quinnstorm-kde-decorator
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
