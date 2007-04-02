@@ -7,12 +7,10 @@ License:	GPL v2+
 Group:		Themes
 Source0:	http://releases.beryl-project.org/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	186826182dc2cefb3aaa09b7af938bec
-Patch0:		%{name}-ac260-lt.patch
-Patch1:		%{name}-include.patch
-Patch2:		kde-ac260-lt.patch
+Patch0:		%{name}-include.patch
+Patch1:		kde-ac260-lt.patch
 URL:		http://www.beryl-project.org/
 BuildRequires:	autoconf >= 2.50
-BuildRequires:	automake >= 1.5
 BuildRequires:	beryl-core-devel >= 1:%{version}
 BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	kdebase-devel >= 9:3.5.0
@@ -38,9 +36,8 @@ przeznaczony do używania wraz z KDE.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p0
-%patch2 -p1
+%patch0 -p0
+%patch1 -p1
 
 mv -f po/{es_ES,es}.po
 mv -f po/{hu_HU,hu}.po
@@ -73,11 +70,8 @@ zh_TW
 EOF
 
 %build
-# can't libtoolize with KDE mess
-#%{__aclocal}
 %{__autoconf}
 %{__autoheader}
-#%{__automake}
 %configure \
 %if "%{_lib}" == "lib64"
 	--enable-libsuffix=64 \
