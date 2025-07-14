@@ -36,8 +36,8 @@ przeznaczony do używania wraz z KDE.
 
 %prep
 %setup -q
-%patch0 -p0
-%patch1 -p1
+%patch -P0 -p0
+%patch -P1 -p1
 
 mv -f po/{es_ES,es}.po
 mv -f po/{hu_HU,hu}.po
